@@ -32,8 +32,8 @@ async function loadComponent(elementId, filePath) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-    await loadComponent('navbar', '../components/navbar.html');
-    await loadComponent('footer', '../components/footer.html');
+    await loadComponent('navbar', './components/navbar.html');
+    await loadComponent('footer', './components/footer.html');
 
     // Chame a função de modo escuro aqui após os componentes serem carregados
     const { setupDarkMode } = await import('./scriptdarkmode.js');

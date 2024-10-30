@@ -41,12 +41,41 @@
             text-align: center;
             margin-left: 285px; /* Centraliza horizontalmente */
         }
+		
+		/* Estilos para telas maiores */
+		.navbar-toggler {
+			display: none;
+		}
+
+		/* Responsividade para telas menores */
+		@media (max-width: 768px) {
+			.navbar-inner {
+        		flex-direction: column;
+			}
+
+			.navbar-text {
+				font-size: 30px;
+				margin-top: 10px;
+				margin-right: 285px;
+			}
+
+			.navbar-brand img {
+				max-height: 70px;
+				margin-left: 25px;
+			}
+			
+			.mode-toggle {
+				margin-bottom: 10px;
+			}
+		}
+
         .mode-toggle {
             cursor: pointer;
             font-size: 20px;
             color: #007bff;
             margin-left: auto; /* Move o botão para o lado direito */
         }
+
         .footer {
             background-color: #f8f9fa;
             border-top: 1px solid #ddd;

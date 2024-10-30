@@ -18,3 +18,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         window.location.href = url.toString();
     });
 });
+
+function toggleNavbar() {
+    const navbarCollapse = document.getElementById("navbarCollapse");
+    navbarCollapse.classList.toggle("show");
+}
+
