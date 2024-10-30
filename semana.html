@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEMANA</title>
+	<!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styleindex.css">
+	<link rel="stylesheet" href="./styles/styleloading.css">
+</head>
+<body>
+	
+    <div id="loadingScreen">
+		<div class="spinner"></div>
+		<p>Carregando...</p>
+	</div>
+	
+	<div id="navbar"></div>
+	
+	<div class="container form-container">
+		<div class="form-header">
+			SEMANA:
+		</div>
+		<div class="form-box">
+			<form id="semanaForm">
+				<div class="form-row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="meta_venda">META DE VENDA:</label>
+							<input type="text" class="form-control input-numerico" id="meta_venda" name="meta_venda" required placeholder="Digite a meta">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="venda_realizado">REALIZADO:</label>
+							<input type="text" class="form-control input-numerico" id="venda_realizado" placeholder="Digite o resultado">
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="meta_recebimento">META RECEBIMENTO:</label>
+							<input type="text" class="form-control input-numerico" id="meta_recebimento" placeholder="Digite a meta">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="recebimento_realizado">REALIZADO:</label>
+							<input type="text" class="form-control input-numerico" id="recebimento_realizado" placeholder="Digite o resultado">
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Gerar Imagem</button>
+			</form>
+			<canvas id="canvas" width="800" height="600" style="display:none;"></canvas>
+			<div class="download-buttons">
+				<button id="downloadJPG" class="btn btn-secondary" style="display:none;">Baixar JPG</button>
+        		<button id="downloadPDF" class="btn btn-danger" style="display:none;">Baixar PDF</button>
+			</div>
+
+		</div>
+		<a onclick="navigateTo('../app/index.html')">
+			<i class="fa-solid fa-backward option-back"></i>
+			<div></div>
+		</a>
+	</div>
+	
+	<div id="footer"></div>
+	
+	<script type="module" src="./scripts/loadcomponents.js"></script>
+	<script src="./scripts/baseimagens.js"></script>
+    <script src="./scripts/script.js"></script>
+	<!-- Bootstrap JS and dependencies -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+</body>
+</html>
